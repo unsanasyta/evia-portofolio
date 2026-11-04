@@ -1,26 +1,145 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Colors */
+  --color-tertiary: #6a5a61;
+  --color-on-tertiary-fixed-variant: #524349;
+  --color-on-error: #ffffff;
+  --color-error: #ba1a1a;
+  --color-outline-variant: #d4c2c7;
+  --color-on-tertiary: #ffffff;
+  --color-on-background: #1e1a23;
+  --color-error-container: #ffdad6;
+  --color-surface-tint: #805065;
+  --color-on-primary: #ffffff;
+  --color-primary-fixed: #ffd8e6;
+  --color-tertiary-fixed: #f3dde5;
+  --color-surface-container: #f4ebf8;
+  --color-on-secondary-container: #715b74;
+  --color-tertiary-fixed-dim: #d6c1c9;
+  --color-surface-bright: #fff7ff;
+  --color-primary: #805065;
+  --color-secondary: #6d576f;
+  --color-primary-fixed-dim: #f2b6ce;
+  --color-primary-container: #c58da4;
+  --color-on-tertiary-container: #3e3137;
+  --color-inverse-on-surface: #f7edfb;
+  --color-surface-container-low: #faf0fe;
+  --color-surface-variant: #e9dfed;
+  --color-on-secondary-fixed: #26152a;
+  --color-on-primary-fixed: #330e21;
+  --color-secondary-container: #f3d7f4;
+  --color-on-surface: #1e1a23;
+  --color-inverse-surface: #332e38;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-tertiary-container: #ab989f;
+  --color-on-secondary-fixed-variant: #544057;
+  --color-secondary-fixed-dim: #d9beda;
+  --color-on-primary-fixed-variant: #65394d;
+  --color-surface-container-highest: #e9dfed;
+  --color-on-surface-variant: #504448;
+  --color-on-error-container: #93000a;
+  --color-outline: #827378;
+  --color-inverse-primary: #f2b6ce;
+  --color-surface: #fff7ff;
+  --color-background: #fff7ff;
+  --color-on-tertiary-fixed: #24181e;
+  --color-secondary-fixed: #f6daf7;
+  --color-on-primary-container: #50273a;
+  --color-surface-container-high: #efe5f3;
+  --color-surface-dim: #e0d7e4;
+
+  /* Custom Spacing */
+  --spacing-space-xl: 3.5rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-space-lg: 2rem;
+  --spacing-space-md: 1.25rem;
+  --spacing-space-xs: 0.375rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-space-sm: 0.75rem;
+  --spacing-margin: 4rem;
+
+  /* Font Families */
+  --font-sans: var(--font-dm-sans), sans-serif;
+  --font-serif: var(--font-playfair), serif;
+  --font-headline-sm: var(--font-playfair), serif;
+  --font-headline-md: var(--font-playfair), serif;
+  --font-headline-lg: var(--font-playfair), serif;
+  --font-display-hero: var(--font-playfair), serif;
+  --font-title-lg: var(--font-dm-sans), sans-serif;
+  --font-title-md: var(--font-dm-sans), sans-serif;
+  --font-body-lg: var(--font-dm-sans), sans-serif;
+  --font-body-md: var(--font-dm-sans), sans-serif;
+  --font-body-sm: var(--font-dm-sans), sans-serif;
+  --font-label-md: var(--font-dm-sans), sans-serif;
+  --font-label-sm: var(--font-dm-sans), sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Custom Typography Sizes from DESIGN.md */
+@utility text-headline-lg {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+}
+@utility text-headline-md {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+}
+@utility text-headline-sm {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+@utility text-title-lg {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+@utility text-title-md {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+@utility text-body-lg {
+  font-size: 1.125rem;
+  line-height: 1.85rem;
+}
+@utility text-body-md {
+  font-size: 1rem;
+  line-height: 1.65rem;
+}
+@utility text-body-sm {
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+}
+@utility text-label-md {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+@utility text-label-sm {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.06em;
+  font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    overscroll-behavior: none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+::-webkit-scrollbar {
+  display: none;
 }
