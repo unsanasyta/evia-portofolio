@@ -73,14 +73,6 @@ export default function Hero() {
           {/* Three Compact Editorial Highlight Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full pt-4">
             <div className="p-4 rounded-xl bg-surface-container-lowest shadow-sm">
-              <span className="font-headline-sm text-headline-sm text-primary font-bold">
-                3.83<span className="text-sm font-normal text-on-surface-variant"> / 4.00</span>
-              </span>
-              <p className="font-label-sm text-label-sm text-on-surface-variant mt-1">
-                Cumulative GPA
-              </p>
-            </div>
-            <div className="p-4 rounded-xl bg-surface-container-lowest shadow-sm">
               <span className="font-title-md text-title-md text-on-surface font-semibold block leading-tight">
                 AI &amp; ML
               </span>
