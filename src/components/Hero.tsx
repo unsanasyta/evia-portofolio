@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
@@ -128,24 +129,16 @@ export default function Hero() {
               ></path>
             </svg>
 
-            {/* Center Monogram Card */}
-            <div className="relative z-10 w-64 h-64 rounded-2xl bg-surface-container-lowest shadow-xl flex flex-col items-center justify-center p-6 text-center transform transition-transform hover:scale-[1.02] duration-300">
-              <span className="text-primary text-xl mb-1">✦</span>
-              <span className="font-headline-lg text-3xl font-serif text-on-surface tracking-widest">
-                E · A · U · N
-              </span>
-              <div className="w-12 h-0.5 bg-primary-container my-3 rounded-full"></div>
-              <span className="font-label-sm text-label-sm text-primary tracking-widest uppercase">
-                Informatics &apos;23
-              </span>
-              <p className="font-body-sm text-xs text-on-surface-variant mt-2 leading-relaxed">
-                Intelligence &amp; Software Artistry
-              </p>
-              {/* Subtle decorative corner glyphs */}
-              <span className="absolute top-3 left-3 text-[10px] text-tertiary font-mono">01</span>
-              <span className="absolute bottom-3 right-3 text-[10px] text-tertiary font-mono">
-                UNDIP
-              </span>
+            {/* Center Photo Card */}
+            <div className="relative z-10 w-56 sm:w-64 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-surface-container-lowest bg-surface-container-lowest transform transition-transform hover:scale-[1.02] duration-300">
+              <Image
+                src="/01%20Foto%20Resmi.jpg"
+                alt="Evia Auamara Unsa Nasyta"
+                fill
+                priority
+                sizes="(max-width: 640px) 224px, 256px"
+                className="object-cover object-top"
+              />
             </div>
 
             {/* Floating Stat Badge 1: Top Right */}
