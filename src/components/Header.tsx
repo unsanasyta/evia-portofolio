@@ -6,11 +6,6 @@ export default function Header() {
       <div className="h-20 max-w-[1280px] mx-auto px-margin-mobile md:px-space-lg lg:px-margin flex items-center justify-between">
         {/* Logo & Brand */}
         <div className="flex items-center gap-space-sm">
-          <img
-            alt="Evia Portfolio Logo"
-            className="h-8 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida/AEtjO1U-vdotqlgipEGRiYLXPV0XCIx86m1shSbT-bkWH-w6efpbXKp-_q1FS5AIg3W7ZlJtyNuxDi8EdkYn6rYHHaKV_XKEc9HDTJa3o4sW2PSbfXSrsRFlk-SU5Fc2rHl7LwippQINz3Jd-jiulpGNSEGjKq1nD_RoVaZ6ITfT9BwipNkRzkXS6-gNbYlzjHWJT4PTNkEtJr7dB_QYXE0-G4e0D6IOyliA9QAa9O1ts25N"
-          />
           <Link
             className="font-headline-sm text-headline-sm text-on-surface tracking-tight hover:text-primary transition-colors"
             href="#hero"
